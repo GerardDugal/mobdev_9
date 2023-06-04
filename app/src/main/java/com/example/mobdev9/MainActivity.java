@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent sendIntent = new Intent(Intent.ACTION_SEND);
                 sendIntent.setType("text/plain");
                 sendIntent.putExtra(Intent.EXTRA_TEXT,str);
-                startActivity(sendIntent);
+                startActivity(Intent.createChooser(sendIntent, "Поделись со мной"));
             }
         });
 
